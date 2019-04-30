@@ -9,10 +9,10 @@ import org.springframework.context.annotation.{Bean, ComponentScan, Configuratio
 @ComponentScan
 class QuotersConf {
 
-  @Bean
+ /* @Bean
   def springQuoter():QuotePrinter={
     new QuotePrinter {
       override def printQuote(): Unit = println("Spring is everywhere")
     }
-  }
+  }*/
 }

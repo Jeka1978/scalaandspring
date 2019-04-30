@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component
 @Order(2)
 class AlchogolicEnrichmentator extends Enrichmentator {
   override def enrich(data: Map[String, Int]): Map[String, Int] = {
-    if (data("Leff") > 3) data + ("Alchogolic" -> 10) else data
+    if (data("Leff") > 1) data + ("Alchogolic" -> 10) else data
   }
 }

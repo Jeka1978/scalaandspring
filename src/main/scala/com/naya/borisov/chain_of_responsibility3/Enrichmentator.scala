@@ -14,6 +14,6 @@ trait Enrichmentator {
 @Order(1)
 class BeerEnrichmentator extends Enrichmentator {
   override def enrich(data: Map[String, Int]):Map[String,Int] = {
-    data+("Leff"->4)
+    data+("Leff"->2)
   }
 }

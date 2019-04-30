@@ -7,10 +7,27 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
   */
 object Main {
   def main(args: Array[String]): Unit = {
-    val person = Person(age = 15,name = "Fistadantilus")
+
+
+
+
+    var person = Person(age = 15,name = "Fistadantilus")
+
+    person = person.copy()
+
+
+
+
+
+
+
+
+
+
+
     val context = new AnnotationConfigApplicationContext("com.naya.borisov.chain_of_responsibility2")
     val mainValidator = context.getBean("mainValidator").asInstanceOf[PersonMainValidator]
-    val errors = mainValidator.validate(person)
+    val errors:List[String] = mainValidator.validate(person)
     errors.foreach(error=>println(error))
   }
 }

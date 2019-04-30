@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component
   * @author Evgeny Borisov
   */
 @Component
-@Order(3)
-class TerminatorQuoter extends QuotePrinter {
-  override def printQuote(): Unit = println("I'll be back")
-
+@Order(1)
+class TrumpeldorQuoter extends QuotePrinter {
+  override def printQuote(): Unit = {
+    println("Good to die for our country")
+  }
 }

@@ -8,7 +8,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 object MainQuoters {
   def main(args: Array[String]): Unit = {
     val context = new AnnotationConfigApplicationContext("com.naya.borisov.chain_of_responsibility1")
-    context.getBean("mainQuoter").asInstanceOf[QuoterPrintersHolder].printAllQuotes()
+
+    context.getBean("mainQuoter").asInstanceOf[QuoterPrintersHolder]
+      .printAllQuotes()
   }
 
 }
